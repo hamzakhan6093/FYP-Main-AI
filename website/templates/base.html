@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+   
+    <!-- Icon -->
+   <link href="static/img/logo-1.svg" rel="icon">
+   
+
+  <!-- Google Fonts -->
+  <link 
+   href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" 
+   rel="stylesheet"
+  >
+
+
+    <link href="static/vendor/aos/aos.css" rel="stylesheet">
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+      crossorigin="anonymous"
+    >
+
+    <!--
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css') }}">
+    -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+    <title> {% block title %} {% endblock %} </title>
+ 
+</head>
+
+<body>
+
+
+
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top">
+   <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+     <a href="/" class="logo d-flex align-items-center">
+       <img src="static/img/logo-1.svg" alt="">
+       <span>Content.ai</span>
+     </a>
+
+     <nav id="navbar" class="navbar">
+      
+       <ul>
+         <li><a class="nav-link scrollto active" href="/">Home</a></li>
+         <ul>
+           <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+                <li><a href="/videoideas">Generate Video Ideas</a></li>
+                <li><a href="/product-description">Generate Product Description</a></li>
+                <li><a href="/tweet-ideas">Get Tweet Ideas</a></li>
+                <li><a href="/generate-question">Generate Question </a></li>
+                <li><a href="/content-section">Generate Content Section </a></li>
+                <li><a href="/Expand-content">Expand your Content </a></li>
+              </ul>
+            </li>
+          </li>
+        </ul>
+        <li><a href="/about">About</a></li>
+        
+      
+        <li><a class="getstarted scrollto" href="/login">Get Started</a></li>
+      </ul>
+      
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    
+   </nav>
+   </div>
+
+
+   {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+  
+ </header><!-- End Header -->
+
+
+
+ 
+
+
+
+
+
+
+{% block body %}  {% endblock %}
+
+
+ 
+
+
+
+<!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+  
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-5 col-md-12 footer-info">
+              <a href="/" class="logo d-flex align-items-center">
+                <img src="static/img/logo-1.svg" alt="">
+                <span>Content.ai</span>
+              </a>
+              <p> The results shown on this page are rare and can only be achieved with hard work, dedication and total commitment to performance. Every effort has been made to present this software and this training, and you will be able to take full advantage of its potential. </p>
+              <div class="social-links mt-3">
+                <a href="https://www.twitter.com" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+  
+            
+   
+  
+            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+              <h4>Contact Us</h4>
+              <p>
+                NCBA&E Wapda Town campus, Northern Bypass, <br>
+                Multan, Punjab <br>
+                Pakistan <br><br>
+                <strong>Phone:</strong> +92 0301 0000 000<br>
+                <strong>Email:</strong> hamzakhan3906@gmail.com<br>
+              </p>
+  
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Content.ai</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+         
+          Designed by <a href="/hamzakhan"><spam>Hamza Khan & Ayesha Islam </spam></a>
+        </div>
+      </div>
+    </footer><!-- End Footer -->
+  
+
+
+
+
+
+
+
+
+<!-- Javascript files-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type='text/javascript'
+src="{{url_for('static', filename='js')}}"">
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.bundle.min.js"></script>
+<script src="static/js/jquery-3.0.0.min.js"></script>
+<script src="static/js/plugin.js"></script>
+
+
+<!-- sidebar -->
+<script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="static/js/custom.js"></script>
+
+
+<!-- javascript --> 
+<script src="static/js/owl.carousel.js"></script>
+<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
+<script type="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="static/js/vendor/popper.min.js"></script>
+<script src="static/dist/js/bootstrap.min.js"></script>
+
+<!-- Vendor JS Files -->
+<script src="static/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="static/vendor/aos/aos.js"></script>
+<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="static/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="static/js/main.js"></script>
+
+
+</body>
+</html>
