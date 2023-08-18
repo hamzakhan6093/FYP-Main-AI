@@ -43,7 +43,7 @@ def create_app():
 
 
 ## Enter your Open API Key here
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = ''
 
 
 
